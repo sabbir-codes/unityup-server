@@ -90,7 +90,7 @@ app.put("/events/:id", async (req, res) => {
     );
 
     if (!result.matchedCount) {
-      return res.status(404).send({ message: "Event not found Now" });
+      return res.status(404).send({ message: "Event not found" });
     }
 
     return res.send({
