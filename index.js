@@ -51,7 +51,7 @@ app.post("/add-event", async (req, res) => {
     const result = await eventsCollection.insertOne(event);
 
     return res.status(201).send({
-      message: "Event created successfully",
+      message: "Event created successfully.",
       event: { ...event, _id: result.insertedId },
     });
   } catch (error) {
